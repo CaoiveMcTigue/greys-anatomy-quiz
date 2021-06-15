@@ -33,7 +33,7 @@ h2{
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
-}
+    }
 
 .flex-column {
     display: flex;
@@ -78,6 +78,7 @@ h2{
     font-size: 4rem;
     margin-left: 1rem;
 }
+
 
 /* Highscore Page CSS */
 .end-form-container {

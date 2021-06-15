@@ -31,7 +31,7 @@ let questions = [
 
     {
         question: "Who is the lead character in Grey's Anatomy?",
-        choice1: "Georage",
+        choice1: "George",
         choice2: "Derek",
         choice3: "Bailey",
         choice4: "Meredith",
