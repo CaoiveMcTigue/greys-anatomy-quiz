@@ -100,17 +100,17 @@ let questions = [
         choice4: "Plane Crash",
         answer: 3,
     }
-]
+];
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 10
+const SCORE_POINTS = 100;
+const MAX_QUESTIONS = 10;
 
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
-}
+};
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
@@ -128,14 +128,14 @@ getNewQuestion = () => {
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
-        const number = choice.dataset['number']
+        const number = choice.dataset.number
         choice.innerText = currentQuestion['choice' + number]
     })
 
     availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
-}
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
@@ -143,7 +143,7 @@ choices.forEach(choice => {
 
         acceptingAnswers = false
         const selectedChoice = e.target
-        const selectedAnswer = selectedChoice.dataset['number']
+        const selectedAnswer = selectedChoice.dataset.number
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
@@ -158,11 +158,11 @@ choices.forEach(choice => {
             getNewQuestion()
         }, 1000)
     })
-})
+});
 
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
-}
+};
 
-startGame()
+startGame();
