@@ -119,6 +119,18 @@ input::placeholder {
 
 .fa-home {
     margin-left: 1rem;
-    font-size: 2rem;
+    font-size: 4rem;
     color: #fff;
+}
+
+/* Leaderboard CSS */
+
+#highScoreList {
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem; 
 }
