@@ -2,8 +2,14 @@
 
 body {
     background-color: rgb(128, 128, 128);
+    
 }
 
+#background {
+    background-image: url("/greys-anatomy-pic.jpeg");
+    width: 100%;
+    height: 5rem;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -77,6 +83,16 @@ h2{
 .fa-trophy {
     font-size: 4rem;
     margin-left: 1rem;
+}
+
+footer{
+    height: 150px;
+    bottom: 0;
+}
+footer ul{
+    text-align: center;
+    display: flex;
+    font-size: 5rem;
 }
 
 
