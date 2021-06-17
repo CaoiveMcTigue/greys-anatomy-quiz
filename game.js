@@ -1,15 +1,18 @@
+//setting out vairables to manipulate the Dom.
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progress-text');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
-
+//setting out vairables to be used in functions
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+
+// array of objects outlinning the question and answers to appear in quiz.
 let questions = [
     {
         question: "Who is the creator of the television series Grey's Anatomy?",
@@ -101,17 +104,18 @@ let questions = [
         answer: 3,
     }
 ];
-
+//setting more variables to be used within functions.
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 10;
 
+//function set to begin quiz
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
 };
-
+//function to get the next question in the quiz
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
@@ -119,14 +123,17 @@ getNewQuestion = () => {
         return window.location.assign('/highscore.html')
     }
 
+//function to move through the array of questions
     questionCounter++
+//function to display progress bar and fill progress bar while progressing in the quiz.
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
+//function to display questions at random, not the same order everytime.
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
-
+//function to display answer choices underneath question, pulled from questions array
     choices.forEach(choice => {
         const number = choice.dataset.number
         choice.innerText = currentQuestion['choice' + number]
@@ -137,6 +144,7 @@ getNewQuestion = () => {
     acceptingAnswers = true
 };
 
+//function to enable users to phyically click on their choosen answer
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
@@ -144,22 +152,22 @@ choices.forEach(choice => {
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset.number
-
+//IF statement to apply style when correct and another style when incorrect
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-
+//function to give points when answer is correct
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
-
+//function to allow some time between questions to ensure users can see if they got it correct/incorrect
         setTimeout (() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
         }, 1000)
     })
 });
-
+//function to count users score 
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
