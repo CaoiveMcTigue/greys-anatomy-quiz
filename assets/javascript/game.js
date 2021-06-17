@@ -120,7 +120,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
     
-        return window.location.assign('/highscore.html')
+        return window.location.assign('highscore.html')
     }
 
 //function to move through the array of questions
