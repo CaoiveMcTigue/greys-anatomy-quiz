@@ -14,10 +14,11 @@ finalScore.innerText = mostRecentScore;
 username.addEventListener('keyup', () => {
     saveScore.disabled = !username.value
 });
-// function to save user scores
+// function to ensure page does not auto refresh when button is clicked 
 saveHighScore = e => {
     e.preventDefault()
 
+//function to save score from quiz
     const score = {
         score: mostRecentScore,
         name: username.value
