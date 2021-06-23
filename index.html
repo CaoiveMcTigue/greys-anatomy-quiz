@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head tag containing all links needed in this html file-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,31 +9,41 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/5f12df0b61.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="container">
+    <!-- header containing grey's anatomy hero image-->
+    <header>
+        <div id="background">
+        <img src="assets/images/greys-anatomy-pic.jpeg" alt="popular Grey's Anatomy image"> 
+        </div>
+    </header>
+    <main class="container">
+        <!-- div containing title and main text of homepage-->
         <div id="home" class="flex-column flex-center">
             <h1>Grey's Anatomy Quiz</h1>
-            <div id="background" >
-                <img src="assets/images/greys-anatomy-pic.jpeg" alt="popular Grey's Anatomy image">
-            </div>
-            <h2>Consider yourself a Grey’s Anatomy superfan?</h2> 
+            <h2>Consider yourself a Grey’s Anatomy superfan?</h2>
             <h2>Put your knowledge to the test…</h2>
+            <!-- buttons for homepage linked to the quiz page and highscore page-->
             <a href="game.html" class="button">Play <i class="fas fa-stethoscope"></i></a>
-            <a href="leaderboard.html" id="highscore-button"class="button">High Scores <i class="fas fa-trophy"></i></a>
+            <a href="leaderboard.html" id="highscore-button" class="button">High Scores <i
+                    class="fas fa-trophy"></i></a>
         </div>
-    </div>
-
+    </main>
+    <!-- footer containing links to my instagram and github pages to personalise the website-->
     <footer>
         <div>
             <ul>
-            <li>
-                <a href="https://www.instagram.com/keystrokescode/" target="_blank" rel="noopener" aria-label="Visit my Instagram page"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-                <a href="https://github.com/CaoiveMcTigue" target="_blank" rel="noopener" aria-label="Visit my GitHub page"><i class="fab fa-github"></i></a>
-            </li>
-        </ul>
+                <li>
+                    <a href="https://www.instagram.com/keystrokescode/" target="_blank" rel="noopener"
+                        aria-label="Visit my Instagram page"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/CaoiveMcTigue" target="_blank" rel="noopener"
+                        aria-label="Visit my GitHub page"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
         </div>
     </footer>
 </body>
+
 </html>
