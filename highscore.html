@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head tag containing all links needed in this html file-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,21 @@
 </head>
 <body>
     <div class="container">
+        <!--area for the users final score to appear when finished quiz-->
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
+            <!--code for textbox to allow user to enter their name with final score-->
             <form class="end-form-container">
                 <h2 id="end-text">Enter your name below to save your score!</h2>
                 <input type="text" name="name" id="username" placeholder="Enter your name">
                 <button class="button" id="saveScore" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
+            <!--button linked to restarting the quiz and returning to homepage-->
             <a href="game.html" class="button">Try Again</a>
             <a href="index.html" class="button">Go Home <i class="fas fa-home"></i></a>
         </div>    
     </div>
+<!--link to javascript page-->
 <script src="assets/javascript/highscore.js"></script>
 </body>
 </html>
