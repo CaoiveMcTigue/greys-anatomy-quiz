@@ -5,10 +5,10 @@ body {
     
 }
 
-#background {
-    width: 100%;
-    height: 2rem;
-}
+.hero-image {
+    max-width: 100%;    
+    height: auto;
+    }
 
 * {
     box-sizing: border-box;
@@ -16,6 +16,47 @@ body {
     padding: 0;
     font-size: 62.5%;
     font-family: 'roboto', cursive;
+}
+
+header {
+    background-color: rgba(74,0,128,1);
+    background-image: url("/assets/images/hero-image.jpeg");
+    background-size: 100%;
+    background-position: center;
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+header .logo a {
+    background-image: url("/assets/images/grey\'s-anatomy.png");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    text-indent: -9999999px;
+    top: -40px;
+    width: 300px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 h1{
