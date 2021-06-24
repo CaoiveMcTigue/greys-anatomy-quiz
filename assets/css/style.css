@@ -20,10 +20,9 @@ body {
 
 header {
     background-color: rgba(74,0,128,1);
-    background-image: url("/assets/images/hero-image.jpeg");
     background-size: 100%;
     background-position: center;
-    height: 400px;
+    height: 100px;
     padding: 20px;
     text-align: center;
 }
@@ -47,6 +46,23 @@ header .logo a {
     top: -40px;
     width: 300px;
 }
+
+header a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.active {
+    border-bottom: 1px solid #fff;
+}
+
+#image-outer {
+    overflow: hidden;
+}
+
+.hero-image {
+    max-width: 100%;    
+    height: auto;
+    }
 
 ul {
     margin: 0;
@@ -125,17 +141,33 @@ h2{
     font-size: 4rem;
     margin-left: 1rem;
 }
-
-footer{
-    height: 150px;
+/* footer */
+footer {
+    background-color: rgba(74,0,128,1);
+    height: 100px;
+    width: 100%;
     bottom: 0;
 }
-footer ul{
+footer > ul {
     text-align: center;
     display: flex;
-    font-size: 5rem;
 }
 
+footer > li {
+    display: inline;
+}
+
+.fa-instagram-square {
+    font-size: 5rem;
+    color: #fff;
+    margin: 1rem;
+}
+
+.fa-github-square {
+    font-size: 5rem;
+    color: #fff;
+    margin: 1rem;
+}
 
 /* Highscore Page CSS */
 .end-form-container {
@@ -192,3 +224,19 @@ input::placeholder {
     font-size: 2.8rem;
     margin-bottom: 0.5rem; 
 }
+
+/* Fun Facts CSS */
+.funfacts > h1 {
+    text-align: center;
+    font-family: raleway;
+}
+
+.funfactstext {
+    list-style-type: disc;
+}
+
+.funfactstext > li {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+} 

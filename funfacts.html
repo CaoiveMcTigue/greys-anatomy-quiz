@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Facts</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/5f12df0b61.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header containing nav bar-->
@@ -14,16 +15,17 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="game.html">Quiz</a></li>
-                <li><a href="index.html">Grey’s Anatomy Logo</a></li>
+                <li class="logo"><a href="index.html">Grey’s Anatomy Logo</a></li>
                 <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="funfacts.html">Fun Facts</a></li>
+                <li><a href="funfacts.html" class="active">Fun Facts</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
+        <div  class="funfacts">
         <h1>Did You Know?</h1>
-        <ul>
+        <ul class="funfactstext">
             <li>The show's title comes from a real medical textbook.</li>
             <li>"Grey's Anatomy" wasn't actually the original title for the show and was changed at least three times.</li>
             <li>A real hospital in LA is used for some scenes.</li>
@@ -48,6 +50,22 @@
             <li>Ellen Pompeo has made millions of dollars for her work on Grey's Anatomy over the years.</li>
             <li>Shonda Rhimes has said on more than once occasion that "as long as Pompeo wants to continue to make episodes, the show will go on"</li>
         </ul>
+        </div>
     </main>
+    <!-- footer containing links to my instagram and github pages to personalise the website-->
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/keystrokescode/" target="_blank" rel="noopener"
+                        aria-label="Visit my Instagram page"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://github.com/CaoiveMcTigue" target="_blank" rel="noopener"
+                        aria-label="Visit my GitHub page"><i class="fab fa-github-square"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

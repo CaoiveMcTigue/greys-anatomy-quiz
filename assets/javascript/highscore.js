@@ -10,15 +10,15 @@ const MAX_HIGH_SCORES = 10;
 
 finalScore.innerText = mostRecentScore;
 
-// function to reenable the save button 
+//reenable the save button 
 username.addEventListener('keyup', () => {
     saveScore.disabled = !username.value
 });
-// function to ensure page does not auto refresh when button is clicked 
+//ensure page does not auto refresh when button is clicked 
 saveHighScore = e => {
     e.preventDefault()
 
-//function to save score from quiz
+//save score from quiz
     const score = {
         score: mostRecentScore,
         name: username.value
