@@ -74,3 +74,11 @@ body {
 }
 
 /*media query for 320px size screen*/
+@media screen and (max-width: 320px) {
+    #question {
+        min-width: 10rem;
+    }
+    .choice-container {
+        min-width: 10rem;
+    }
+}
