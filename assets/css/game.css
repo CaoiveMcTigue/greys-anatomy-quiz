@@ -1,7 +1,8 @@
+/*edit the body of page*/
 body {
     color: #fff;
 }
-
+/*style the question and answers section of quiz*/
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -28,15 +29,15 @@ body {
     padding: 2rem;
     width: 100%;
 }
-
+/*style if answer is correct*/
 .correct {
     background: green;
 }
-
+/*style if answer is wrong*/
 .incorrect {
     background: red;
 }
-
+/*style progress bar*/
 #progress {
     display: flex;
     justify-content: space-between;
@@ -65,10 +66,11 @@ body {
     background: rgb(0, 128, 0);
     width: 0%;
 }
-
+/* media query for 768px size screen */
 @media screen and (max-width: 768px) { 
     .choice-container{
         min-width: 40rem;
     }
 }
 
+/*media query for 320px size screen*/

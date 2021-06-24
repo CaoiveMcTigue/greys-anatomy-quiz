@@ -57,9 +57,12 @@ header a:hover {
     overflow: hidden;
 }
 
-.hero-image {
-    max-width: 100%;    
-    height: auto;
+#hero-image {   
+    height: 600px;
+    width: 100%;
+    background-image: url("../images/heroimage1.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
     }
 /* style for nav bar */
 ul {
@@ -236,11 +239,12 @@ input::placeholder {
 }
 
 .funfactstext {
-    list-style-type: disc;
+    
 }
 
-.funfactstext > li {
+.funfactstext > p {
     text-align: center;
     font-size: 2rem;
     color: #fff;
+    list-style-type: circle;
 } 
