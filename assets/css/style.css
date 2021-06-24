@@ -1,15 +1,12 @@
+/*link to google fonts to be used across the website*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300&display=swap');
 
+/*applying a background color to the whole website*/
 body {
     background-color: rgb(128, 128, 128);
     
 }
-
-.hero-image {
-    max-width: 100%;    
-    height: auto;
-    }
-
+/* style to be used across the whole website */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +14,7 @@ body {
     font-size: 62.5%;
     font-family: 'roboto', cursive;
 }
-
+/*style to be applied to header of most pages in the website */
 header {
     background-color: rgba(74,0,128,1);
     background-size: 100%;
@@ -34,7 +31,7 @@ header a {
     text-transform: uppercase;
     margin-top: 40px;
 }
-
+/* styling the logo to appear within the nav bar */
 header .logo a {
     background-image: url("/assets/images/grey\'s-anatomy.png");
     background-size: 300px;
@@ -47,14 +44,15 @@ header .logo a {
     width: 300px;
 }
 
+/*style to appear when hovered over nav bar */
 header a:hover {
     border-bottom: 1px solid #fff;
 }
-
+/* style to appear on nav bar when page is active */
 .active {
     border-bottom: 1px solid #fff;
 }
-
+/* hero image */
 #image-outer {
     overflow: hidden;
 }
@@ -63,7 +61,7 @@ header a:hover {
     max-width: 100%;    
     height: auto;
     }
-
+/* style for nav bar */
 ul {
     margin: 0;
     padding: 0;
@@ -75,18 +73,21 @@ li {
     margin-right: 20px;
 }
 
+/* style when using h1 tag */
 h1{
     font-size: 5.4rem;
     color: #fff;
     margin-bottom: 5rem;
 }
 
+/* style when using h2 tag */
 h2{
     font-size: 4.2rem;
     color: #fff;
     margin-bottom: 5rem;
 }
 
+/* style applied to text on index page */
 .container {
     width: 100vw;
     height: 100vh;
@@ -108,6 +109,7 @@ h2{
     align-items: center;
 }
 
+/* style to apply to buttons across the page */
 .button {
     font-size: 5rem;
     padding: 2rem 0;
@@ -132,6 +134,7 @@ h2{
     transform: none; 
 }
 
+/* editing style of icons*/
 .fa-stethoscope {
     font-size: 4rem;
     margin-left: 1rem;
@@ -157,6 +160,7 @@ footer > li {
     display: inline;
 }
 
+/* editing style of icons*/
 .fa-instagram-square {
     font-size: 5rem;
     color: #fff;
