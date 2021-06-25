@@ -6,6 +6,10 @@ body {
     background-color: black;
     
 }
+
+html, body {
+    min-height: 100vh;
+}
 /* style to be used across the whole website */
 * {
     box-sizing: border-box;
@@ -80,7 +84,12 @@ li {
     header .desktop {
         display: none;
     }
+
+    header .logo a {
+        display: none;
+    }
 }
+
 
 @media screen and (max-width: 320px) {
     header .moblie {
@@ -93,13 +102,21 @@ li {
 }
 
 @media screen and (max-width: 400px) {
-    .button {
+    a.button {
         width: 31rem;
         font-size: 2rem;
     }
 
     footer {
         margin-top: 11rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2{
+        font-size: 3.2rem;
     }
 }
 
