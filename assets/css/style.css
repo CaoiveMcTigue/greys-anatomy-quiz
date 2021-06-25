@@ -74,54 +74,6 @@ li {
     margin-right: 20px;
 }
 
-/* Media Query */
-
-@media screen and (max-width: 785px) {
-    header .mobile {
-        display: inline-block;
-    }
-
-    header .desktop {
-        display: none;
-    }
-
-    header .logo a {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 320px) {
-    header .moblie {
-        display: block;
-    }
-
-    header .desktop {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    a.button {
-        width: 31rem;
-        font-size: 2rem;
-    }
-
-    footer {
-        margin-top: 11rem;
-    }
-
-    h1 {
-        font-size: 4.5rem;
-    }
-
-    h2{
-        font-size: 3.2rem;
-    }
-}
-
-
-
 /* style when using h1 tag */
 h1{
     font-size: 5.4rem;
@@ -292,3 +244,57 @@ input::placeholder {
     font-size: 2rem;
     color: #fff;
 } 
+
+/* Media Query */
+
+@media screen and (max-width: 785px) {
+    header .mobile {
+        display: inline-block;
+    }
+
+    header .desktop {
+        display: none;
+    }
+
+    header .logo a {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    header .moblie {
+        display: block;
+    }
+
+    header .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    a.button {
+        width: 31rem;
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 11rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2{
+        font-size: 3.2rem;
+    }
+
+    .choice-container {
+        min-width: 33rem;
+    }
+
+    #question {
+        font-size: 3rem;
+    }
+}
