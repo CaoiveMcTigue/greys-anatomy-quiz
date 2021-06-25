@@ -19,7 +19,7 @@ header {
     background-color: rgba(74,0,128,1);
     background-size: 100%;
     background-position: center;
-    height: 100px;
+    height: 150px;
     padding: 20px;
     text-align: center;
 }
@@ -33,7 +33,7 @@ header a {
 }
 /* styling the logo to appear within the nav bar */
 header .logo a {
-    background-image: url("/assets/images/grey\'s-anatomy.png");
+    background-image: url("assets/images/greys-anatomy.png");
     background-size: 300px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -53,6 +53,11 @@ header a:hover {
     border-bottom: 1px solid #fff;
 }
 
+/* class named "mobile" should not appear on desktop */
+header .mobile {
+    display: none;
+}
+
 /* style for nav bar */
 ul {
     margin: 0;
@@ -63,6 +68,28 @@ ul {
 li {
     display: inline-block;
     margin-right: 20px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 785px) {
+    header .mobile {
+        display: inline-block;
+    }
+
+    header .desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header .moblie {
+        display: block;
+    }
+
+    header .desktop {
+        display: none;
+    }
 }
 
 /* style when using h1 tag */
@@ -150,6 +177,8 @@ footer > ul {
 
 footer > li {
     display: inline;
+    justify-content: center;
+    align-items: center;
 }
 
 /* editing style of icons*/
@@ -232,9 +261,3 @@ input::placeholder {
     font-size: 2rem;
     color: #fff;
 } 
-
-/* Media Query */
-
-@media screen and () {
-
-}
