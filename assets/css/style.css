@@ -3,7 +3,7 @@
 
 /*applying a background color to the whole website*/
 body {
-    background-color: rgb(128, 128, 128);
+    background-color: black;
     
 }
 /* style to be used across the whole website */
@@ -52,18 +52,7 @@ header a:hover {
 .active {
     border-bottom: 1px solid #fff;
 }
-/* hero image */
-#image-outer {
-    overflow: hidden;
-}
 
-#hero-image {   
-    height: 600px;
-    width: 100%;
-    background-image: url("../images/greys-anatomy-pic.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    }
 /* style for nav bar */
 ul {
     margin: 0;
@@ -238,13 +227,14 @@ input::placeholder {
     font-family: raleway;
 }
 
-.funfactstext {
-    
-}
-
 .funfactstext > p {
     text-align: center;
     font-size: 2rem;
     color: #fff;
-    list-style-type: circle;
 } 
+
+/* Media Query */
+
+@media screen and () {
+
+}
