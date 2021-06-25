@@ -33,7 +33,7 @@ header a {
 }
 /* styling the logo to appear within the nav bar */
 header .logo a {
-    background-image: url("assets/images/greys-anatomy.png");
+    background-image: url("../images/greys-anatomy.png");
     background-size: 300px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -91,6 +91,19 @@ li {
         display: none;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .button {
+        width: 31rem;
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 11rem;
+    }
+}
+
+
 
 /* style when using h1 tag */
 h1{
@@ -169,6 +182,7 @@ footer {
     height: 100px;
     width: 100%;
     bottom: 0;
+    text-align: center;
 }
 footer > ul {
     text-align: center;
