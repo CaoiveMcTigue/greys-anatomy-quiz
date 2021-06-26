@@ -67,6 +67,7 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    color: #fff;
 }
 
 li {
@@ -222,17 +223,19 @@ input::placeholder {
 }
 
 /* Leaderboard CSS */
-
-#highScoreList {
+#highscores {
+    color: #fff;
+}
+.highscore-list {
     list-style: none;
     margin-bottom: 4rem;
-    color: #fff;
 }
 
 .high-score {
     font-size: 2.8rem;
     margin-bottom: 0.5rem; 
 }
+
 
 /* Fun Facts CSS */
 .funfacts > h1 {
