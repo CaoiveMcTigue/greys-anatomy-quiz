@@ -226,6 +226,7 @@ input::placeholder {
 #highScoreList {
     list-style: none;
     margin-bottom: 4rem;
+    color: #fff;
 }
 
 .high-score {
