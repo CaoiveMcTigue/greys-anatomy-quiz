@@ -18,7 +18,7 @@ username.addEventListener('keyup', () => {
 });
 //ensure page does not auto refresh when button is clicked 
 saveHighScore = e => {
-  e.preventDefault();};
+  e.preventDefault()
 
 //save score from quiz
     const score = {
@@ -29,11 +29,11 @@ saveHighScore = e => {
     highScores.push(score);
 
     highScores.sort((a,b) => {
-        return b.score - a.score;
+        return b.score - a.score
     });
 
     highScores.splice(5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores)); 
     window.location.assign('index.html');
-};
+}

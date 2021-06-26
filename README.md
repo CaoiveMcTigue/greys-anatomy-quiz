@@ -20,7 +20,7 @@ A navagation bar on top of the page containing four links and a logo.
 * The Fun Facts links to a page which has some facts about the tv show Grey's Anatomy giving the user some more information and a chance to learn more about the show.
 * In the middle of these four buttons is a logo for the tv show Grey's Anatomy which is also a button which will redirect you to the Home page also.
 
-There is a Grey's Anatomy hero image and some text beneath it. 
+There is then some text beneath it. 
 
 Then there is two buttons:
 1. Play : which links to the quiz page to begin the game.
@@ -61,6 +61,9 @@ The Fun Facts page is the last page in this website. The features here include:
 * The footer with the social media icons is displayed at the end of this page also.
 
 ## Testing
+
+
+
 
 ## Technology
 * I used HTML as my main language in this website and is used on all pages.

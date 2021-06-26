@@ -112,68 +112,69 @@ const MAX_QUESTIONS = 10;
 
 //begin quiz
 startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
 };
 //get the next question in the quiz
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score);
+        localStorage.setItem('mostRecentScore', score)
     
-        return window.location.assign('highscore.html');
+        return window.location.assign('highscore.html')
     }
 
 //move through the array of questions
-    questionCounter++;
+    questionCounter++
 //display progress bar and fill progress bar while progressing in the quiz.
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`;
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
 //display questions at random, not the same order everytime.
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionsIndex];
-    question.innerText = currentQuestion.question;
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
 //display answer choices underneath question, pulled from questions array
     choices.forEach(choice => {
-        const number = choice.dataset.number;
-        choice.innerText = currentQuestion['choice' + number];
+        const number = choice.dataset.number
+        choice.innerText = currentQuestion['choice' + number]
     });
 
     availableQuestions.splice(questionsIndex, 1);
 
-    acceptingAnswers = true;
+    acceptingAnswers = true
 };
 
 //enable users to phyically click on their choosen answer
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
+        if(!acceptingAnswers) return
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset.number;
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset.number
 //IF statement to apply style when correct and another style when incorrect
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 
   'incorrect'
 //give points when answer is correct
         if(classToApply === 'correct') {
-            incrementScore(SCORE_POINTS);
+            incrementScore(SCORE_POINTS)
         }
 
         selectedChoice.parentElement.classList.add(classToApply);
 //allow some time between questions to ensure users can see if they got it correct/incorrect
         setTimeout (() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, 1000);
-    });
-});
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+
+        }, 1000)
+    })
+})
 //count users score 
 incrementScore = num => {
-    score +=num;
-    scoreText.innerText = score;
-};
+    score +=num
+    scoreText.innerText = score
+}
 //starts running quiz
 startGame();
