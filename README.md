@@ -1,5 +1,7 @@
 # README for Grey's Anatomy Quiz
 
+![mockup screenshot](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-mockup.png?raw=true)
+
 ## Introduction
 The sole purpose for this website was following a brief layout for my second milestone project, it was required I create an interacting webpage.
 
@@ -62,7 +64,70 @@ The Fun Facts page is the last page in this website. The features here include:
 
 ## Testing
 
+When testing I used a number of different website and approches.
 
+I validated all my HTML code [here](https://validator.w3.org/nu/#textarea). No errors or warnings were detected.
+
+Index HTML page:
+
+![screenshot-index-validation](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-index.png?raw=true)
+
+Game HTML page:
+![screenshot-game-validation](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-game.png?raw=true)
+
+Highscore HTML page:
+![screenshot-highscore-validation](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-highscore.png?raw=true)
+
+Leaderboard HTML page:
+![screenshot-leaderboard-validation](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-leaderboard.png?raw=true)
+
+Funfacts HTML page:
+![screenshot-funfacts-validation](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-funfacts.png?raw=true)
+
+I used a CSS validator to test my CSS code,which can be found [here](https://jigsaw.w3.org/css-validator/#validate_by_input). This also returned with no errors or warning. 
+
+Style CSS page:
+![css-testing](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-css-style.png?raw=true)
+
+Game CSS page:
+![css-game-testing](https://raw.githubusercontent.com/CaoiveMcTigue/greys-anatomy-quiz/master/documents/images/screenshot-css-game.png)
+
+I then tested all my JavaScript code using this [website](https://jshint.com/). This did return some warnings but I managed to clear alot of them and have explained what i did to achieve this below.
+
+JavaScript Game page:
+![javascript-game-screenshot](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-js-game.png?raw=true)
+
+JavaScript Highscore page:
+![javascript-highscore-screenshot](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-js-highscore.png?raw=true)
+
+JavaScript Leaderboard page:
+![javascript-leaderboard-screenshot](https://github.com/CaoiveMcTigue/greys-anatomy-quiz/blob/master/documents/images/screenshot-js-leaderboard.png?raw=true)
+
+When testing my javascript code, I got a lot of ES6 warning. When I looked into this I found on [stack overflow](https://stackoverflow.com/questions/27441803/why-does-jshint-throw-a-warning-if-i-am-using-const) to insert a commented out line of code on the top of all javascript pages within my website. This line of code is as follows: jshint esversion: 6 and is now inserted on all javascript pages this solved most warning being flag within jshint.
+
+However, on the game.js page, there was three undefines variables flagged they appeared like so:
+* 114. startGame
+* 179. startGame
+* 118. getNewQuestion
+* 121. getNewQuestion
+* 169. getNewQuestion
+* 162. incrementScore
+* 174. incrementScore
+
+When I looked into these, after searching on google and other websites, the only solution I could come up with was the fact that the curly brace was opened on the line indicated and had a number of different functions and variable etc. within the curly brace before it was closed and sometime jshint will flag this warning because of this.
+
+I also tested my page by playing the quiz a number of times myself to ensure different things were working correctly and there was no unexpected result to pressing a button or redirecting the page through a link, for example.
+
+While doing this I ensured:
+* All links and buttons were working correctly
+* The progress bar was filling up while I moved through the questions.
+* The question counter (question 4 of 10) was counting up correctly while I moved through the questions
+* I ensured the question turned green when correct.
+* I ensured the question turned red when incorrect.
+* I ensured the score added 100 point when correct and remained unchanged when incorrect.
+* I ensured when the tenth question was reached and answered you were redirected to the highscore page, where you have the option to save your score with your name.
+
+Everything was working as expected, to my delight.
 
 
 ## Technology
